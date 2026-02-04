@@ -1,17 +1,19 @@
-package com.gla.array;
 import java.util.Scanner;
 
-class VotingCheck {
+public class VotingCheck {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int age;
+        int[] ages = new int[10];
 
-        for (int i = 1; i <= 10; i++) {
-            age = sc.nextInt();
-            if (age >= 18) {
-                System.out.println("Eligible to vote");
+        for (int i = 0; i < 10; i++) {
+            ages[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < 10; i++) {
+            if (ages[i] >= 18) {
+                System.out.println("Student " + (i + 1) + " can vote");
             } else {
-                System.out.println("Not eligible to vote");
+                System.out.println("Student " + (i + 1) + " cannot vote");
             }
         }
     }
